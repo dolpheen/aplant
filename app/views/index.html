@@ -1,0 +1,83 @@
+<!doctype html>
+
+<meta charset=utf-8>
+<meta http-equiv=X-UA-Compatible content=IE=edge>
+<base href="/">
+<title></title>
+<meta name=description" content="">
+<meta name=viewport content="width=device-width">
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+<!-- build:css({.tmp,app}) styles/main.css -->
+<link rel=stylesheet href="styles/bootstrap.css">
+<link rel=stylesheet href="styles/aplant.css">
+<!-- endbuild -->
+
+<body ng-app=aPlantApp>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <!--<a class="brand" href="#">Сток Девелопмент</a>-->
+            <div class="nav-collapse collapse navbar-responsive-collapse">
+                <ul class="nav">
+                    <li><a href="#">На главную</a></li>
+                    <li><a href="#/equipmentList">Список оборудования</a></li>
+                </ul>
+                <ul class="nav pull-right">
+                    <li class="divider-vertical"></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Дополнительно <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><i class="icon-user"></i> Войти в систему</a></li>
+                            <li><a href="#">Выйти из системы</a></li>
+                            <li><a href="#">Настройка</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Помощь</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-search pull-right" action="">
+                    <i class="icon-search"></i>
+                    <input type="text" class="search-query span2" placeholder="Поиск">
+                </form>
+
+            </div><!-- /.nav-collapse -->
+        </div>
+    </div><!-- /navbar-inner -->
+</div><!-- /navbar -->
+
+<!-- Add your site or application content here -->
+<div style="height: 6em"></div>
+<div class="container" ng-view=""></div>
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/jquery/jquery.js"></script>
+<script src="scripts/vendors/bootstrap.js"></script>
+
+<!-- build:js(app) scripts/modules.js -->
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="scripts/equipment.js"></script>
+<script src="scripts/app.js"></script>
+
+<!--Controllers-->
+<script src="scripts/controllers/controllers.js"></script>
+<script src="scripts/controllers/equipment-list-controller.js"></script>
+<!--Services-->
+<script src="scripts/services/equipment-resource.js"></script>
+
+<!-- endbuild -->
+</body>
+
